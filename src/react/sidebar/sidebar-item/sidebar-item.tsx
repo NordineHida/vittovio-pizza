@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import "./sidebar-item.css"
 
 type SidebarItemProperties = {
@@ -7,9 +8,9 @@ type SidebarItemProperties = {
 
 export function SidebarItem({title, path}: SidebarItemProperties)
 {
-
+    let navigate = useNavigate();
     const navigateToPath = () => {
-        //TODO
+        navigate(path)
     }
 
     return (
